@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Little Inferno</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="Little Inferno - Un juego único de puzles donde quemarás objetos en una chimenea mágica. Descubre combinaciones secretas y desbloquea nuevos objetos en esta cautivadora aventura.">
+	<meta name="theme-color" content="#080912">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="Little Inferno">
+	<meta property="og:description" content="Un juego único de puzles donde quemarás objetos en una chimenea mágica.">
+	<meta property="og:site_name" content="Little Inferno">
+	<meta property="og:url" content="https://juega-ya.com">
+	<meta property="og:type" content="website">
+	<link rel="canonical" href="https://juega-ya.com/" />
+
+	<!-- Styles -->
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css?_v=20250120110803" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20250120110803">
+
+	<!-- Favicon  -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+	<!-- Liquid button svg filter -->
+	<svg width="0" height="0" class="hidden">
+		<defs>
+			<filter id="buttonFilter">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur">
+				</feGaussianBlur>
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9" result="buttonFilter"></feColorMatrix>
+				<feComposite in="SourceGraphic" in2="buttonFilter" operator="atop">
+				</feComposite>
+				<feBlend in="SourceGraphic" in2="buttonFilter"></feBlend>
+			</filter>
+		</defs>
+	</svg>
+
+	<!-- Preload critical assets -->
+	<link rel="preload" href="img/logo.webp" as="image">
+	<link rel="preload" href="files/hero.mp4" as="video" type="video/mp4">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header data-scroll="120" data-scroll-show class="header">
+			<div class="header__container">
+				<div class="header__wrapper">
+					<span></span>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="index.html#hero" class="menu__link">Inicio</a>
+								</li>
+								<li class="menu__item">
+									<a href="index.html#about" class="menu__link">Acerca de</a>
+								</li>
+								<li class="menu__item">
+									<a href="index.html#features" class="menu__link">Características</a>
+								</li>
+								<li class="menu__item">
+									<a href="index.html#platforms" class="menu__link">Galería</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__actions">
+						<button type="button" class="menu__icon icon-menu">
+							<span></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="hero" id="hero">
+				<div class="hero__bg">
+					<div class="hero__bg-grid"></div>
+					<div class="hero__bg-gradient"></div>
+					<div class="hero__bg-noise"></div>
+				</div>
+
+				<div class="hero__container">
+					<div class="hero__content">
+						<div class="hero__left">
+							<div class="hero__icon-wrap">
+								<div class="hero__icon">
+									<img src="img/logo.webp" alt="Little Inferno Icon">
+									<div class="hero__icon-shine"></div>
+								</div>
+							</div>
+
+							<div class="hero__title">
+								<div class="hero__title-main">
+									<h1>Little Inferno</h1>
+								</div>
+								<div class="hero__badges">
+									<span class="hero__badge hero__badge--hot">Premio</span>
+									<span class="hero__badge hero__badge--featured">Más de 1 millón de copias
+										vendidas</span>
+								</div>
+							</div>
+
+							<div class="hero__meta">
+								<div class="hero__developer">
+									<div class="hero__developer-info">
+										<span class="hero__developer-label">Desarrollador</span>
+										<span class="hero__developer-name">Tomorrow Corporation</span>
+									</div>
+									<div class="hero__developer-verified">
+										<i class="fas fa-check-circle"></i>
+									</div>
+								</div>
+							</div>
+
+							<div class="hero__stats">
+								<div class="hero__stat">
+									<div class="hero__stat-value">4.5</div>
+									<div class="hero__stat-stars">
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star"></i>
+										<i class="fas fa-star-half"></i>
+									</div>
+									<div class="hero__stat-label">Puntuación</div>
+								</div>
+								<div class="hero__stat">
+									<div class="hero__stat-value">1M+</div>
+									<div class="hero__stat-icon">
+										<i class="fas fa-users"></i>
+									</div>
+									<div class="hero__stat-label">Jugadores</div>
+								</div>
+								<div class="hero__stat">
+									<div class="hero__stat-value">#1</div>
+									<div class="hero__stat-icon">
+										<i class="fas fa-trophy"></i>
+									</div>
+									<div class="hero__stat-label">Puzzle</div>
+								</div>
+							</div>
+
+							<div class="hero__description">
+								<p>
+									¡Felicitaciones por tu nueva Chimenea de Entretenimiento Little Inferno! Lanza tus
+									juguetes al fuego y juega con ellos mientras se queman.
+									Mantente caliente ahí dentro. ¡Está haciendo frío afuera! Una aventura única que
+									transcurre casi por completo frente a una chimenea.
+								</p>
+							</div>
+
+							<div class="hero__cta">
+								<div class="button button--light hero__button">
+									<a href="#platforms" class="button__title">
+										<span class="title-btn">
+											<span class="text-default">Descargar ahora</span>
+											<span class="text-hover">Descargar ahora</span>
+										</span>
+									</a>
+									<span class="button__icon">
+										<i class="fa-solid fa-play"></i>
+									</span>
+								</div>
+								<div class="hero__price">
+									<span class="hero__price-tag">$2.99</span>
+									<span class="hero__price-note">Compra única</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="hero__right">
+							<div class="hero__showcase">
+								<div class="hero__device">
+									<div class="hero__device-frame">
+										<video autoplay loop muted playsinline>
+											<source src="files/hero.mp4" type="video/mp4">
+										</video>
+									</div>
+									<div class="hero__device-notch"></div>
+									<div class="hero__device-glare"></div>
+									<div class="hero__device-home-indicator"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about" id="about">
+				<div class="about__container">
+					<div class="about__content">
+						<div class="about__header">
+							<h2>Descubre el Fuego</h2>
+							<span class="about__subtitle">Una Experiencia Única de Puzzle y Experimentación</span>
+						</div>
+						<div class="about__grid">
+							<div class="about__info">
+								<div class="about__text-block">
+									<h3>La Historia</h3>
+									<p>
+										En la nevada ciudad de Burnington, donde la Corporación Tomorrow produce la
+										"Chimenea de Entretenimiento Little Inferno"
+										para mantener calientes a los residentes, te embarcarás en una aventura única.
+										Quema objetos, descubre combinaciones
+										secretas y desvela los misterios que se ocultan detrás de las llamas.
+									</p>
+								</div>
+								<div class="about__text-block about__text-block--secondary">
+									<h3>La Experiencia</h3>
+									<p>
+										Con más de 99 combinaciones diferentes para descubrir, objetos únicos para
+										quemar y una historia cautivadora que se
+										desarrolla a través de misteriosas cartas, Little Inferno te ofrece una
+										experiencia de juego inolvidable. Experimenta
+										con diferentes objetos, observa sus reacciones al fuego y descubre todos los
+										secretos que esconde tu chimenea.
+									</p>
+								</div>
+							</div>
+							<div class="about__stats">
+								<div class="about__stat about__stat--levels">
+									<div class="about__stat-content">
+										<div class="about__stat-number">
+											<span class="about__stat-value">99</span>
+											<span class="about__stat-plus">+</span>
+										</div>
+										<div class="about__stat-label">Combinaciones</div>
+										<div class="about__stat-desc">Para descubrir</div>
+									</div>
+									<div class="about__stat-icon">
+										<i class="fas fa-fire"></i>
+									</div>
+								</div>
+								<div class="about__stat about__stat--rating">
+									<div class="about__stat-content">
+										<div class="about__stat-number">
+											<span class="about__stat-value">4.5</span>
+											<span class="about__stat-plus">★</span>
+										</div>
+										<div class="about__stat-label">Valoración</div>
+										<div class="about__stat-desc">En Google Play</div>
+									</div>
+									<div class="about__stat-icon">
+										<i class="fas fa-star"></i>
+									</div>
+								</div>
+								<div class="about__stat about__stat--downloads">
+									<div class="about__stat-content">
+										<div class="about__stat-number">
+											<span class="about__stat-value">1M</span>
+											<span class="about__stat-plus">+</span>
+										</div>
+										<div class="about__stat-label">Descargas</div>
+										<div class="about__stat-desc">Jugadores activos</div>
+									</div>
+									<div class="about__stat-icon">
+										<i class="fas fa-download"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="features" id="features">
+				<div class="features__container">
+					<div class="features__content">
+						<h2>Características Principales</h2>
+						<div class="features__grid">
+							<article class="features__item features__item--puzzle">
+								<div class="features__icon">
+									<i class="fas fa-puzzle-piece"></i>
+								</div>
+								<div class="features__info">
+									<h3>Puzzles Ingeniosos</h3>
+									<p><strong>99+</strong> combinaciones únicas para descubrir</p>
+									<span class="features__detail">Resuelve intrigantes desafíos en un mundo de fuego y
+										experimentación</span>
+								</div>
+							</article>
+							<article class="features__item features__item--graphics">
+								<div class="features__icon">
+									<i class="fas fa-palette"></i>
+								</div>
+								<div class="features__info">
+									<h3>Gráficos Vibrantes</h3>
+									<p>Mundo <strong>2D</strong> con diseño artístico único</p>
+									<span class="features__detail">Explora un mundo de fuego y nieve con personajes
+										únicos</span>
+								</div>
+							</article>
+							<article class="features__item features__item--brain">
+								<div class="features__icon">
+									<i class="fas fa-brain"></i>
+								</div>
+								<div class="features__info">
+									<h3>Desafíos Creativos</h3>
+									<p><strong>Múltiples</strong> tipos de enigmas</p>
+									<span class="features__detail">Encuentra objetos ocultos y descifra pistas en un
+										mundo de fuego</span>
+								</div>
+							</article>
+							<article class="features__item features__item--adventure">
+								<div class="features__icon">
+									<i class="fas fa-rocket"></i>
+								</div>
+								<div class="features__info">
+									<h3>Aventura Épica</h3>
+									<p><strong>1</strong> mundo único</p>
+									<span class="features__detail">Viaja a través de un mundo de nieve y fuego para
+										descubrir secretos</span>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="gallery" id="gallery">
+				<div class="gallery__container">
+					<div class="gallery__content">
+						<h2>Galería</h2>
+						<p>Explora el mundo de Little Inferno</p>
+					</div>
+					<div class="gallery__slider swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide gallery__slide">
+								<img src="img/screenshots/01.webp" alt="Captura de pantalla de Little Inferno" />
+							</div>
+							<div class="swiper-slide gallery__slide">
+								<img src="img/screenshots/02.webp" alt="Captura de pantalla de Little Inferno" />
+							</div>
+							<div class="swiper-slide gallery__slide">
+								<img src="img/screenshots/03.webp" alt="Captura de pantalla de Little Inferno" />
+							</div>
+							<div class="swiper-slide gallery__slide">
+								<img src="img/screenshots/04.webp" alt="Captura de pantalla de Little Inferno" />
+							</div>
+						</div>
+						<div class="gallery__navigation">
+							<button type="button" class="gallery__prev">
+								<i class="fa-solid fa-chevron-left"></i>
+							</button>
+							<div class="gallery__pagination"></div>
+							<button type="button" class="gallery__next">
+								<i class="fa-solid fa-chevron-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="trailer" id="trailer" style="position: relative; 
+				background: url('img/poster.webp') center/cover no-repeat;">
+				<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));">
+				</div>
+				<div class="trailer__container">
+					<div class="trailer__content">
+						<h2>Mira el Juego en Acción</h2>
+						<p>Descubre el mágico mundo de Little Inferno</p>
+						<div class="button button--light button--trailer" data-video-src="files/hero.mp4" data-video-popup-trigger>
+							<a class="button__title">
+								<span class="title-btn">
+									<span class="text-default">Ver tráiler</span>
+									<span class="text-hover">Ver tráiler</span>
+								</span>
+							</a>
+							<span class="button__icon">
+								<i class="fa-solid fa-play"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="platforms" id="platforms">
+				<div class="platforms__bg">
+					<div class="platforms__bg-gradient"></div>
+					<div class="platforms__bg-noise"></div>
+				</div>
+				<div class="platforms__container">
+					<div class="platforms__content">
+						<h2>Opciones de Descarga</h2>
+						<p>Comienza a jugar en tu plataforma favorita</p>
+					</div>
+					<div class="platforms__grid">
+						<div class="platforms__item">
+							<div class="platforms__icon">
+								<i class="fa-brands fa-android"></i>
+								<div class="platforms__icon-shine"></div>
+							</div>
+							<h3>Android</h3>
+							<p>Disponible en Google Play</p>
+							<div class="platforms__meta">
+								<span class="platforms__badge">$2.99</span>
+								<span class="platforms__rating">
+									<i class="fas fa-star"></i>
+									<span>4.5</span>
+								</span>
+							</div>
+							<a href="https://play.google.com/store/apps/details?id=com.littleinferno.google" class="platforms__button">
+								<span>Descargar en Google Play</span>
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+						<div class="platforms__item">
+							<div class="platforms__icon">
+								<i class="fa-brands fa-apple"></i>
+								<div class="platforms__icon-shine"></div>
+							</div>
+							<h3>iOS</h3>
+							<p>Disponible en App Store</p>
+							<div class="platforms__meta">
+								<span class="platforms__badge">$2.99</span>
+								<span class="platforms__rating">
+									<i class="fas fa-star"></i>
+									<span>4.5</span>
+								</span>
+							</div>
+							<a href="https://apps.apple.com/app/little-inferno/id590250573" class="platforms__button">
+								<span>Descargar en App Store</span>
+								<i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__column">
+						<div class="footer__logo">
+							<a href="index.html" class="footer__logo">
+								<img src="img/logo.webp" alt="Little Inferno Logo">
+							</a>
+						</div>
+						<p class="footer__description">
+							Little Inferno es un juego único donde quemarás objetos en una chimenea mágica.
+							Descubre combinaciones secretas y desbloquea nuevos objetos en esta cautivadora aventura.
+						</p>
+						<div class="footer__socials">
+							<a href="https://play.google.com/store/apps/details?id=com.littleinferno.google" class="footer__social-link" target="_blank">
+								<i class="fa-brands fa-google-play"></i>
+							</a>
+						</div>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__title">Enlaces Rápidos</h3>
+						<ul class="footer__list">
+							<li><a href="index.html#hero" class="footer__link">Inicio</a></li>
+							<li><a href="index.html#about" class="footer__link">Acerca de</a></li>
+							<li><a href="index.html#features" class="footer__link">Características</a></li>
+							<li><a href="index.html#gallery" class="footer__link">Galería</a></li>
+						</ul>
+					</div>
+					<div class="footer__column">
+						<h3 class="footer__title">Legal</h3>
+						<ul class="footer__list">
+							<li><a href="privacy.html" class="footer__link">Política de Privacidad</a></li>
+							<li><a href="terms.html" class="footer__link">Términos de Servicio</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__copyright">
+						<p>&copy; 2025 Little Inferno. Todos los derechos reservados. <a href="https://juega-ya.com">juega-ya.com</a></p>
+					</div>
+				</div>
+			</div>
+			<button class="scroll-to-top" aria-label="Volver arriba">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+				</svg>
+			</button>
+		</footer>
+
+		<div id="cursor" class="ball"></div>
+		<div id="cursor_inner" class="ball"></div>
+		<!-- Video Popup -->
+		<div class="video-popup" data-video-popup>
+			<div class="video-popup__overlay" data-video-popup-overlay></div>
+			<div class="video-popup__content">
+				<div class="video-popup__player" data-video-popup-player>
+					<video controls preload="metadata">
+						<source type="video/mp4">
+					</video>
+				</div>
+				<button class="video-popup__close" data-video-popup-close>
+					<i class="fa-solid fa-times"></i>
+				</button>
+			</div>
+		</div>
+		<button class="scroll-to-top" aria-label="Yukarı kaydır" style="--progress: 0deg">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path d="M12 2L18.9282 8.92823L17.5141 10.3424L13 5.82843V22H11V5.82843L6.48579 10.3424L5.07166 8.92823L12 2Z" />
+			</svg>
+		</button>
+	</div>
+	<script src="js/app.min.js?_v=20250306141828"></script>
+</body>
+
+</html>
